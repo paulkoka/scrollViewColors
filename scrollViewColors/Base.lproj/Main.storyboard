@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,84 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N41-hB-xx3">
+                                <rect key="frame" x="67.5" y="577" width="240" height="70"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-bx-QXN" userLabel="first">
+                                        <rect key="frame" x="-0.5" y="0.0" width="240" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve2-a7-VhG">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
+                                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ve2-a7-VhG" secondAttribute="bottom" id="KKt-e8-Q4y"/>
+                                            <constraint firstItem="ve2-a7-VhG" firstAttribute="top" secondItem="Mxb-bx-QXN" secondAttribute="top" id="TJI-Y1-6c4"/>
+                                            <constraint firstItem="ve2-a7-VhG" firstAttribute="leading" secondItem="Mxb-bx-QXN" secondAttribute="leading" id="VlO-9m-bbi"/>
+                                            <constraint firstAttribute="trailing" secondItem="ve2-a7-VhG" secondAttribute="trailing" id="h2E-tY-tA4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azg-qb-vg3" userLabel="second">
+                                        <rect key="frame" x="239.5" y="0.0" width="240" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="047-zD-hiI">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="047-zD-hiI" firstAttribute="leading" secondItem="azg-qb-vg3" secondAttribute="leading" id="6Yo-Tj-hDe"/>
+                                            <constraint firstAttribute="trailing" secondItem="047-zD-hiI" secondAttribute="trailing" id="6fK-sH-ePX"/>
+                                            <constraint firstAttribute="bottom" secondItem="047-zD-hiI" secondAttribute="bottom" id="pwc-rd-2Q6"/>
+                                            <constraint firstItem="047-zD-hiI" firstAttribute="top" secondItem="azg-qb-vg3" secondAttribute="top" id="rYA-Vh-6k7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="azg-qb-vg3" secondAttribute="trailing" id="7vE-tn-haw"/>
+                                    <constraint firstItem="azg-qb-vg3" firstAttribute="top" secondItem="N41-hB-xx3" secondAttribute="top" id="88Q-eI-RD8"/>
+                                    <constraint firstItem="azg-qb-vg3" firstAttribute="height" secondItem="N41-hB-xx3" secondAttribute="height" id="8jr-Fe-Woe"/>
+                                    <constraint firstItem="Mxb-bx-QXN" firstAttribute="leading" secondItem="N41-hB-xx3" secondAttribute="leading" id="OLB-5F-phx"/>
+                                    <constraint firstItem="Mxb-bx-QXN" firstAttribute="height" secondItem="N41-hB-xx3" secondAttribute="height" id="OhU-sf-tFj"/>
+                                    <constraint firstAttribute="width" constant="240" id="fNk-px-B5N"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mxb-bx-QXN" secondAttribute="bottom" id="lVu-bl-aaG"/>
+                                    <constraint firstItem="Mxb-bx-QXN" firstAttribute="trailing" secondItem="azg-qb-vg3" secondAttribute="leading" id="lsJ-UJ-zaP"/>
+                                    <constraint firstAttribute="height" constant="70" id="nkV-yh-FLn" userLabel="height = 70"/>
+                                    <constraint firstItem="Mxb-bx-QXN" firstAttribute="top" secondItem="N41-hB-xx3" secondAttribute="top" id="rB8-5U-iiP"/>
+                                    <constraint firstAttribute="bottom" secondItem="azg-qb-vg3" secondAttribute="bottom" id="rb8-Xv-aTW"/>
+                                    <constraint firstItem="Mxb-bx-QXN" firstAttribute="width" secondItem="N41-hB-xx3" secondAttribute="width" id="tO7-JV-eny"/>
+                                    <constraint firstItem="azg-qb-vg3" firstAttribute="width" secondItem="N41-hB-xx3" secondAttribute="width" id="u6F-fO-ooE"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N41-hB-xx3" secondAttribute="bottom" constant="20" id="F2t-vf-Sjp" userLabel="Safe Area.bottom = Scroll View.bottom + 60"/>
+                            <constraint firstItem="N41-hB-xx3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zIN-ic-QML"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="N41-hB-xx3" id="Hwr-Yv-axr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
