@@ -24,11 +24,12 @@
 }
 
 -(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    if ([self.view.backgroundColor isEqual:UIColor.yellowColor]) {
+    if ([[NSNumber numberWithDouble:self.scrollView.contentOffset.x] isEqual:[NSNumber numberWithDouble: 240]]) {
         self.view.backgroundColor = UIColor.redColor;
-    } else if ([self.view.backgroundColor isEqual:UIColor.redColor]){
+    } else if ([[NSNumber numberWithDouble:self.scrollView.contentOffset.x] isEqual:[NSNumber numberWithDouble: 0]]){
         self.view.backgroundColor = UIColor.yellowColor;
     }
+
     
 }
 
